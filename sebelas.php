@@ -1,24 +1,10 @@
 <?php
 
-class Dosen {
-    public $nama;
-    public $nip;
-    public $no_hp;
-    public $alamat;
-    public $nidn;
+use App\Model\Akademik\Dosen;
 
-    public function mengajar() {
-        echo "{$this->nama} sedang mengajar.\n";
-    }
-}
+require_once 'vendor/autoload.php';
 
-$dian = new Dosen();
-
-$dian->nama = "Dian Prawira";
-$dian->nip = "198411132015041001";
-$dian->no_hp = "62111111";
-$dian->alamat = "Jln Purnama";
-$dian->nidn = "0013118405";
-
+$dian = new Dosen(198411132015041001, "Dian Prawira", 62111111, "Jln Purnama", "0013118405");
 $dian->mengajar();
-?>
+$dian->nidn = 1000121184001;
+
